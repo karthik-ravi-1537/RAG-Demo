@@ -1,0 +1,68 @@
+# Default configuration for RAG Demo
+
+chunking:
+  strategy: "fixed_size"
+  chunk_size: 512
+  overlap: 50
+  separators:
+    - "\n\n"
+    - "\n"
+    - ". "
+    - " "
+  preserve_structure: true
+  min_chunk_size: 100
+
+embedding:
+  model_name: "all-MiniLM-L6-v2"  # Default to local model to avoid API key requirement
+  dimension: 384  # Dimension for all-MiniLM-L6-v2
+  batch_size: 100
+  normalize: true
+  api_key: null  # Set via environment variable OPENAI_API_KEY for OpenAI models
+
+retrieval_top_k: 5
+similarity_threshold: 0.7
+context_template: |
+  Context: {context}
+  
+  Question: {query}
+  
+  Answer:
+max_context_tokens: 4000
+
+# Logging configuration
+logging:
+  level: "INFO"
+  log_file: "logs/rag_demo.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Model configurations for different RAG approaches
+models:
+  vanilla_rag:
+    llm_model: "gpt-3.5-turbo"
+    temperature: 0.7
+    max_tokens: 500
+  
+  hierarchical_rag:
+    llm_model: "gpt-3.5-turbo"
+    temperature: 0.7
+    max_tokens: 500
+    summary_levels: 3
+  
+  graph_rag:
+    llm_model: "gpt-3.5-turbo"
+    temperature: 0.7
+    max_tokens: 500
+    entity_extraction_model: "spacy"
+    max_graph_depth: 2
+  
+# Removed multimodal_rag configuration
+
+# Evaluation settings
+evaluation:
+  metrics:
+    - "precision_at_k"
+    - "recall_at_k"
+    - "mrr"
+    - "bleu"
+    - "rouge"
+  k_values: [1, 3, 5, 10]

@@ -1,0 +1,118 @@
+# Core dependencies for RAG Demo
+# These are the essential packages that install cleanly and work together
+
+# ============================================================================
+# CORE SCIENTIFIC COMPUTING
+# ============================================================================
+numpy>=1.21.0           # Fundamental package for numerical computing and array operations
+                        # Used for: embedding vectors, similarity calculations, matrix operations
+
+pandas>=1.3.0           # Data manipulation and analysis library
+                        # Used for: CSV processing, data analysis, structured data handling
+
+scipy>=1.7.0            # Scientific computing library with advanced mathematical functions
+                        # Used for: statistical operations, optimization, sparse matrices
+
+# ============================================================================
+# TEXT PROCESSING & NLP
+# ============================================================================
+nltk>=3.6               # Natural Language Toolkit for text processing
+                        # Used for: tokenization, sentence splitting, text preprocessing
+
+tiktoken>=0.4.0         # OpenAI's tokenizer for accurate token counting
+                        # Used for: token counting, context length management, cost estimation
+
+# ============================================================================
+# MACHINE LEARNING & EMBEDDINGS
+# ============================================================================
+scikit-learn>=1.3.0     # Machine learning library with clustering and metrics
+                        # Used for: similarity metrics, clustering, evaluation metrics
+
+sentence-transformers>=2.2.0  # State-of-the-art sentence embeddings
+                              # Used for: local embedding generation, semantic similarity
+
+transformers>=4.20.0    # Hugging Face transformers library
+                        # Used for: pre-trained models, tokenizers, model loading
+
+# ============================================================================
+# API INTEGRATIONS
+# ============================================================================
+openai>=1.0.0           # Official OpenAI Python client
+                        # Used for: GPT models, OpenAI embeddings, chat completions
+
+# ============================================================================
+# GRAPH PROCESSING
+# ============================================================================
+networkx>=2.8.0         # Graph theory and network analysis library
+                        # Used for: knowledge graph construction, graph traversal, graph algorithms
+
+# ============================================================================
+# MULTI-MODAL PROCESSING
+# ============================================================================
+Pillow>=8.3.0           # Python Imaging Library for image processing
+                        # Used for: image loading, preprocessing, format conversion
+
+# ============================================================================
+# CONFIGURATION & UTILITIES
+# ============================================================================
+PyYAML>=6.0             # YAML parser and emitter
+                        # Used for: configuration files, settings management
+
+python-dotenv>=0.19.0   # Load environment variables from .env files
+                        # Used for: API key management, environment configuration
+
+# ============================================================================
+# VISUALIZATION & PLOTTING
+# ============================================================================
+matplotlib>=3.5.0       # Comprehensive plotting library
+                        # Used for: basic plots, embedding visualizations, performance charts
+
+plotly>=5.10.0          # Interactive plotting library
+                        # Used for: interactive graphs, 3D visualizations, web-based plots
+
+# ============================================================================
+# TESTING & QUALITY ASSURANCE
+# ============================================================================
+pytest>=7.0.0           # Testing framework
+                        # Used for: unit tests, integration tests, test automation
+
+# ============================================================================
+# DEVELOPMENT TOOLS
+# ============================================================================
+black>=22.0.0           # Code formatter for consistent Python style
+                        # Used for: code formatting, maintaining code quality
+
+# ============================================================================
+# OPTIONAL DEPENDENCIES (install separately if needed)
+# ============================================================================
+# Advanced NLP:
+# spacy>=3.4.0          # Industrial-strength NLP (requires model downloads)
+#                       # Used for: named entity recognition, dependency parsing
+
+# Additional Visualization:
+# seaborn>=0.11.0       # Statistical data visualization
+#                       # Used for: advanced statistical plots, heatmaps
+
+# Web Interfaces:
+# streamlit>=1.12.0     # Web app framework for ML/data science
+#                       # Used for: interactive demos, web-based RAG interface
+
+# gradio>=3.0.0         # Alternative web interface framework
+#                       # Used for: quick ML model demos, user interfaces
+
+# Jupyter Environment:
+# jupyter>=1.0.0        # Jupyter notebook environment
+#                       # Used for: interactive tutorials, experimentation
+
+# ipywidgets>=7.7.0     # Interactive widgets for Jupyter
+#                       # Used for: interactive parameter tuning, demos
+
+# Testing & Documentation:
+# pytest-cov>=3.0.0    # Test coverage reporting
+#                       # Used for: measuring test coverage, quality metrics
+
+# sphinx>=4.5.0         # Documentation generator
+#                       # Used for: API documentation, user guides
+
+# mypy>=0.950           # Static type checker
+#                       # Used for: type checking, code quality assurance
