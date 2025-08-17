@@ -50,6 +50,8 @@ idna==3.10
     #   anyio
     #   httpx
     #   requests
+iniconfig==2.1.0
+    # via pytest
 jinja2==3.1.6
     # via torch
 jiter==0.10.0
@@ -90,6 +92,7 @@ packaging==25.0
     #   huggingface-hub
     #   matplotlib
     #   plotly
+    #   pytest
     #   transformers
 pandas==2.3.1
     # via rag-demo (pyproject.toml)
@@ -100,12 +103,22 @@ pillow==11.3.0
     #   sentence-transformers
 plotly==6.3.0
     # via rag-demo (pyproject.toml)
+pluggy==1.6.0
+    # via pytest
 pydantic==2.11.7
     # via openai
 pydantic-core==2.33.2
     # via pydantic
+pygments==2.19.2
+    # via pytest
 pyparsing==3.2.3
     # via matplotlib
+pytest==8.4.1
+    # via
+    #   rag-demo (pyproject.toml)
+    #   pytest-asyncio
+pytest-asyncio==1.1.0
+    # via rag-demo (pyproject.toml)
 python-dateutil==2.9.0.post0
     # via
     #   matplotlib

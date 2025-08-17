@@ -1386,6 +1386,8 @@ dependencies = [
     { name = "pandas" },
     { name = "pillow" },
     { name = "plotly" },
+    { name = "pytest" },
+    { name = "pytest-asyncio" },
     { name = "python-dotenv" },
     { name = "pyyaml" },
     { name = "scikit-learn" },
@@ -1399,8 +1401,6 @@ dependencies = [
 dev = [
     { name = "black" },
     { name = "pre-commit" },
-    { name = "pytest" },
-    { name = "pytest-asyncio" },
     { name = "ruff" },
 ]
 
@@ -1416,8 +1416,8 @@ requires-dist = [
     { name = "pillow", specifier = ">=8.3.0" },
     { name = "plotly", specifier = ">=5.10.0" },
     { name = "pre-commit", marker = "extra == 'dev'" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.0.0" },
-    { name = "pytest-asyncio", marker = "extra == 'dev'" },
+    { name = "pytest", specifier = ">=7.0.0" },
+    { name = "pytest-asyncio" },
     { name = "python-dotenv", specifier = ">=0.19.0" },
     { name = "pyyaml", specifier = ">=6.0" },
     { name = "ruff", marker = "extra == 'dev'" },
