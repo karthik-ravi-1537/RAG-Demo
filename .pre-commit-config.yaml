@@ -1,0 +1,24 @@
+# Run all pre-commit hooks on all files:
+# pre-commit run --all-files
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4
+    hooks:
+      - id: ruff
+        args: ["--fix"]
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        args: ["."]
+
+  # Sync requirements.txt with pyproject.toml
+  - repo: local
+    hooks:
+      - id: sync-requirements
+        name: Sync requirements.txt from pyproject.toml
+        entry: uv pip compile pyproject.toml -o requirements.txt
+        language: system
+        files: pyproject.toml
+        pass_filenames: false
