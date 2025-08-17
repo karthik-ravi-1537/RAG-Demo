@@ -402,6 +402,30 @@ This project is designed to be educational, showing:
 
 ## Contributing
 
+### Development Setup
+
+```bash
+# Clone and install with dev dependencies
+uv sync --dev
+source .venv/bin/activate
+
+# Install development tools
+uv pip install -e ".[dev]"
+
+# Set up pre-commit hooks
+pre-commit install
+
+# Run formatting and linting
+pre-commit run --all-files
+```
+
+### Development Tools
+
+- **ruff**: Fast Python linter and formatter
+- **black**: Code formatter
+- **pre-commit**: Git hooks for code quality
+- **pytest**: Testing framework
+
 Contributions are welcome! When contributing:
 - Follow the existing code style and structure
 - Add tests for new functionality
