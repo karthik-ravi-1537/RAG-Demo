@@ -13,7 +13,6 @@ repos:
       - id: black
         args: ["."]
 
-  # Sync requirements.txt with pyproject.toml
   - repo: local
     hooks:
       - id: sync-requirements
