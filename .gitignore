@@ -1,21 +1,12 @@
-# Virtual environments
-venv-rag-demo/
-.venv/
-venv/
-env/
-ENV/
-rag-env/
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -29,6 +20,7 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -38,6 +30,10 @@ MANIFEST
 # PyInstaller
 *.manifest
 *.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Unit test / coverage reports
 htmlcov/
@@ -52,7 +48,29 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
-cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -65,15 +83,9 @@ ipython_config.py
 .python-version
 
 # pipenv
-Pipfile.lock
+#Pipfile.lock
 
-# poetry
-poetry.lock
-
-# pdm
-.pdm.toml
-
-# PEP 582
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
 # Celery stuff
@@ -82,6 +94,16 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+venv-*/
 
 # Spyder project settings
 .spyderproject
@@ -101,38 +123,67 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# pytype static type analyzer
-.pytype/
+# PyTorch
+*.pth
+*.pt
 
-# Cython debug symbols
-cython_debug/
-
-# PyCharm
-.idea/
-
-# VS Code
-.vscode/
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# RAG-specific ignores
-logs/
-data/
-models/
-embeddings/
-*.pkl
-*.joblib
+# TensorFlow
+*.pb
 *.h5
-*.hdf5
+saved_model/
+checkpoints/
+logs/
+tensorboard_logs/
 
-# NLTK data
-nltk_data/
+# Data files
+*.csv
+*.json
+*.parquet
+*.pkl
+*.pickle
+*.npy
+*.npz
 
-# Hugging Face cache
-.cache/huggingface/
+# Model files
+models/
+*.model
+*.bin
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Large files and datasets
+data/raw/
+data/processed/
+data/external/
+*.zip
+*.tar.gz
+*.rar
+
+# Experiment tracking
+mlruns/
+wandb/
+.neptune/
+
+# Docker
+.dockerignore
+Dockerfile.dev

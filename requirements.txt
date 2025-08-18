@@ -1,118 +1,200 @@
-# Core dependencies for RAG Demo
-# These are the essential packages that install cleanly and work together
-
-# ============================================================================
-# CORE SCIENTIFIC COMPUTING
-# ============================================================================
-numpy>=1.21.0           # Fundamental package for numerical computing and array operations
-                        # Used for: embedding vectors, similarity calculations, matrix operations
-
-pandas>=1.3.0           # Data manipulation and analysis library
-                        # Used for: CSV processing, data analysis, structured data handling
-
-scipy>=1.7.0            # Scientific computing library with advanced mathematical functions
-                        # Used for: statistical operations, optimization, sparse matrices
-
-# ============================================================================
-# TEXT PROCESSING & NLP
-# ============================================================================
-nltk>=3.6               # Natural Language Toolkit for text processing
-                        # Used for: tokenization, sentence splitting, text preprocessing
-
-tiktoken>=0.4.0         # OpenAI's tokenizer for accurate token counting
-                        # Used for: token counting, context length management, cost estimation
-
-# ============================================================================
-# MACHINE LEARNING & EMBEDDINGS
-# ============================================================================
-scikit-learn>=1.3.0     # Machine learning library with clustering and metrics
-                        # Used for: similarity metrics, clustering, evaluation metrics
-
-sentence-transformers>=2.2.0  # State-of-the-art sentence embeddings
-                              # Used for: local embedding generation, semantic similarity
-
-transformers>=4.20.0    # Hugging Face transformers library
-                        # Used for: pre-trained models, tokenizers, model loading
-
-# ============================================================================
-# API INTEGRATIONS
-# ============================================================================
-openai>=1.0.0           # Official OpenAI Python client
-                        # Used for: GPT models, OpenAI embeddings, chat completions
-
-# ============================================================================
-# GRAPH PROCESSING
-# ============================================================================
-networkx>=2.8.0         # Graph theory and network analysis library
-                        # Used for: knowledge graph construction, graph traversal, graph algorithms
-
-# ============================================================================
-# MULTI-MODAL PROCESSING
-# ============================================================================
-Pillow>=8.3.0           # Python Imaging Library for image processing
-                        # Used for: image loading, preprocessing, format conversion
-
-# ============================================================================
-# CONFIGURATION & UTILITIES
-# ============================================================================
-PyYAML>=6.0             # YAML parser and emitter
-                        # Used for: configuration files, settings management
-
-python-dotenv>=0.19.0   # Load environment variables from .env files
-                        # Used for: API key management, environment configuration
-
-# ============================================================================
-# VISUALIZATION & PLOTTING
-# ============================================================================
-matplotlib>=3.5.0       # Comprehensive plotting library
-                        # Used for: basic plots, embedding visualizations, performance charts
-
-plotly>=5.10.0          # Interactive plotting library
-                        # Used for: interactive graphs, 3D visualizations, web-based plots
-
-# ============================================================================
-# TESTING & QUALITY ASSURANCE
-# ============================================================================
-pytest>=7.0.0           # Testing framework
-                        # Used for: unit tests, integration tests, test automation
-
-# ============================================================================
-# DEVELOPMENT TOOLS
-# ============================================================================
-black>=22.0.0           # Code formatter for consistent Python style
-                        # Used for: code formatting, maintaining code quality
-
-# ============================================================================
-# OPTIONAL DEPENDENCIES (install separately if needed)
-# ============================================================================
-# Advanced NLP:
-# spacy>=3.4.0          # Industrial-strength NLP (requires model downloads)
-#                       # Used for: named entity recognition, dependency parsing
-
-# Additional Visualization:
-# seaborn>=0.11.0       # Statistical data visualization
-#                       # Used for: advanced statistical plots, heatmaps
-
-# Web Interfaces:
-# streamlit>=1.12.0     # Web app framework for ML/data science
-#                       # Used for: interactive demos, web-based RAG interface
-
-# gradio>=3.0.0         # Alternative web interface framework
-#                       # Used for: quick ML model demos, user interfaces
-
-# Jupyter Environment:
-# jupyter>=1.0.0        # Jupyter notebook environment
-#                       # Used for: interactive tutorials, experimentation
-
-# ipywidgets>=7.7.0     # Interactive widgets for Jupyter
-#                       # Used for: interactive parameter tuning, demos
-
-# Testing & Documentation:
-# pytest-cov>=3.0.0    # Test coverage reporting
-#                       # Used for: measuring test coverage, quality metrics
-
-# sphinx>=4.5.0         # Documentation generator
-#                       # Used for: API documentation, user guides
-
-# mypy>=0.950           # Static type checker
-#                       # Used for: type checking, code quality assurance
+# This file was autogenerated by uv via the following command:
+#    uv pip compile pyproject.toml -o requirements.txt
+annotated-types==0.7.0
+    # via pydantic
+anyio==4.10.0
+    # via
+    #   httpx
+    #   openai
+certifi==2025.8.3
+    # via
+    #   httpcore
+    #   httpx
+    #   requests
+charset-normalizer==3.4.3
+    # via requests
+click==8.2.1
+    # via nltk
+contourpy==1.3.3
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
+distro==1.9.0
+    # via openai
+filelock==3.19.1
+    # via
+    #   huggingface-hub
+    #   torch
+    #   transformers
+fonttools==4.59.1
+    # via matplotlib
+fsspec==2025.7.0
+    # via
+    #   huggingface-hub
+    #   torch
+h11==0.16.0
+    # via httpcore
+hf-xet==1.1.7
+    # via huggingface-hub
+httpcore==1.0.9
+    # via httpx
+httpx==0.28.1
+    # via openai
+huggingface-hub==0.34.4
+    # via
+    #   sentence-transformers
+    #   tokenizers
+    #   transformers
+idna==3.10
+    # via
+    #   anyio
+    #   httpx
+    #   requests
+iniconfig==2.1.0
+    # via pytest
+jinja2==3.1.6
+    # via torch
+jiter==0.10.0
+    # via openai
+joblib==1.5.1
+    # via
+    #   nltk
+    #   scikit-learn
+kiwisolver==1.4.9
+    # via matplotlib
+markupsafe==3.0.2
+    # via jinja2
+matplotlib==3.10.5
+    # via rag-demo (pyproject.toml)
+mpmath==1.3.0
+    # via sympy
+narwhals==2.1.2
+    # via plotly
+networkx==3.5
+    # via
+    #   rag-demo (pyproject.toml)
+    #   torch
+nltk==3.9.1
+    # via rag-demo (pyproject.toml)
+numpy==2.3.2
+    # via
+    #   rag-demo (pyproject.toml)
+    #   contourpy
+    #   matplotlib
+    #   pandas
+    #   scikit-learn
+    #   scipy
+    #   transformers
+openai==1.99.9
+    # via rag-demo (pyproject.toml)
+packaging==25.0
+    # via
+    #   huggingface-hub
+    #   matplotlib
+    #   plotly
+    #   pytest
+    #   transformers
+pandas==2.3.1
+    # via rag-demo (pyproject.toml)
+pillow==11.3.0
+    # via
+    #   rag-demo (pyproject.toml)
+    #   matplotlib
+    #   sentence-transformers
+plotly==6.3.0
+    # via rag-demo (pyproject.toml)
+pluggy==1.6.0
+    # via pytest
+pydantic==2.11.7
+    # via openai
+pydantic-core==2.33.2
+    # via pydantic
+pygments==2.19.2
+    # via pytest
+pyparsing==3.2.3
+    # via matplotlib
+pytest==8.4.1
+    # via
+    #   rag-demo (pyproject.toml)
+    #   pytest-asyncio
+pytest-asyncio==1.1.0
+    # via rag-demo (pyproject.toml)
+python-dateutil==2.9.0.post0
+    # via
+    #   matplotlib
+    #   pandas
+python-dotenv==1.1.1
+    # via rag-demo (pyproject.toml)
+pytz==2025.2
+    # via pandas
+pyyaml==6.0.2
+    # via
+    #   rag-demo (pyproject.toml)
+    #   huggingface-hub
+    #   transformers
+regex==2025.7.34
+    # via
+    #   nltk
+    #   tiktoken
+    #   transformers
+requests==2.32.4
+    # via
+    #   huggingface-hub
+    #   tiktoken
+    #   transformers
+safetensors==0.6.2
+    # via transformers
+scikit-learn==1.7.1
+    # via
+    #   rag-demo (pyproject.toml)
+    #   sentence-transformers
+scipy==1.16.1
+    # via
+    #   rag-demo (pyproject.toml)
+    #   scikit-learn
+    #   sentence-transformers
+sentence-transformers==5.1.0
+    # via rag-demo (pyproject.toml)
+six==1.17.0
+    # via python-dateutil
+sniffio==1.3.1
+    # via
+    #   anyio
+    #   openai
+sympy==1.14.0
+    # via torch
+threadpoolctl==3.6.0
+    # via scikit-learn
+tiktoken==0.11.0
+    # via rag-demo (pyproject.toml)
+tokenizers==0.21.4
+    # via transformers
+torch==2.8.0
+    # via sentence-transformers
+tqdm==4.67.1
+    # via
+    #   huggingface-hub
+    #   nltk
+    #   openai
+    #   sentence-transformers
+    #   transformers
+transformers==4.55.2
+    # via
+    #   rag-demo (pyproject.toml)
+    #   sentence-transformers
+typing-extensions==4.14.1
+    # via
+    #   anyio
+    #   huggingface-hub
+    #   openai
+    #   pydantic
+    #   pydantic-core
+    #   sentence-transformers
+    #   torch
+    #   typing-inspection
+typing-inspection==0.4.1
+    # via pydantic
+tzdata==2025.2
+    # via pandas
+urllib3==2.5.0
+    # via requests
