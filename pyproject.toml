@@ -9,7 +9,7 @@ description = "Evolution of RAG from vanilla to Graph-RAG implementations with e
 readme = "README.md"
 license = "MIT"
 authors = [{name = "Karthik Ravi"}]
-requires-python = ">=3.11"
+requires-python = "==3.11.*"
 keywords = ["rag", "retrieval-augmented-generation", "graph-rag", "nlp", "ai", "demo"]
 
 dependencies = [
